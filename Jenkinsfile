@@ -14,7 +14,8 @@ stages {
     }
     stage('Maven Build') {
         steps {
-            sh "if [ -f \"pom.xml\" ];then mvn -B -f pom.xml clean package && cp target/*.jar .;else echo \"This is not a Java Project\";fi"
+            //sh "if [ -f \"pom.xml\" ];then mvn -B -f pom.xml clean package && cp target/*.jar .;else echo \"This is not a Java Project\";fi"
+            sh 'mvn -B -DskipTests clean package'
         }
     }
     //stage('Docker Image Build') {
