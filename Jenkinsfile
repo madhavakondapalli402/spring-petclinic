@@ -1,6 +1,6 @@
 pipeline {
    environment {
-     git_url = "https://github.com/spring-projects/spring-petclinic.git"
+     git_url = "https://github.com/madhavakondapalli402/spring-petclinic.git"
      git_branch = "main"
    }
 
