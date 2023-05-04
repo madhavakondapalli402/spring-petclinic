@@ -7,7 +7,8 @@ node {
 	}
 	
 	stage('Build Package ') {
-        sh "mvn clean"
+         def mvnHome = tool name: 'MAVEN_HOME', type: 'maven'
+        sh "${mvnHome}/bin/mvn clean"
         sh "mvn package"
 	}
 }
