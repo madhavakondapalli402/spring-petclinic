@@ -7,6 +7,8 @@ node {
 	}
 	
 	stage('Build Package ') {
+        jdk = tool name: 'JAVA_HOME', type: 'jdk'
+        env.JAVA_HOME = "$jdk"
         def mvnHome = tool name: 'MAVEN_HOME', type: 'maven'
         sh "${mvnHome}/bin/mvn clean"
         sh "/opt/apache-maven-3.9.1/bin/mvn package"
