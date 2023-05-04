@@ -8,6 +8,6 @@ node {
 	
 	stage('Build Package ') {
 	def MNHOME = tool name: 'MAVEN_HOME', type: 'maven'
-	sh "${MNHOME}/bin/mvn package"
+	sh "${MNHOME}/bin/mvn -B -f pom.xml clean package"
 	}
 }
