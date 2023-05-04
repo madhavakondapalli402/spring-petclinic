@@ -9,6 +9,6 @@ node {
 	stage('Build Package ') {
         def mvnHome = tool name: 'MAVEN_HOME', type: 'maven'
         sh "${mvnHome}/bin/mvn clean"
-        sh "${mvnHome}/bin/mvn package"
+        sh "/opt/apache-maven-3.9.1/bin/mvn package"
 	}
 }
