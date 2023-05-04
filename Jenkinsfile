@@ -1,6 +1,6 @@
 node {
 
-	stage(' Clone PetClinic Source Code) {
+	stage(' Clone PetClinic Source Code') {
 	git 'https://github.com/madhavakondapalli402/spring-petclinic.git'
 	}
 	
