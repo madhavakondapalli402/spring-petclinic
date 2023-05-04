@@ -7,6 +7,8 @@ node {
 	}
 	
 	stage('Build Package ') {
+        jdk = tool name: 'JAVA_HOME', type: 'jdk'
+        env.JAVA_HOME = "$jdk"
 	def MNHOME = tool name: 'MAVEN_HOME', type: 'maven'
 	sh "${MNHOME}/bin/mvn clean"
         sh "${MNHOME}/bin/mvn package"
